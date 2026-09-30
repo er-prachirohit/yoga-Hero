@@ -18,8 +18,8 @@ export default function YogaPoses() {
           {yogaPoses.map((pose) => (
             <motion.div 
               key={pose.id} 
-              whileHover={{ y: -10 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              whileHover={{ y: -8 }}
+              transition={{ type: "tween", ease: "easeOut", duration: 0.3 }}
               className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative h-64 w-full bg-[#DDE5D3]">

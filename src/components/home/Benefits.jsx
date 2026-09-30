@@ -25,8 +25,8 @@ export default function Benefits() {
           {benefits.map((benefit, index) => (
             <motion.div 
               key={index} 
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 400 }}
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "tween", ease: "easeOut", duration: 0.3 }}
               className="p-8 rounded-2xl bg-[#F6F1E7] border border-[#DDE5D3] hover:border-[#C9A24B] transition-colors"
             >
               <div className="w-12 h-12 bg-[#354A3E] text-[#F6F1E7] rounded-full flex items-center justify-center mb-6">

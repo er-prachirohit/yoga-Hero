@@ -21,8 +21,8 @@ export default function Services() {
           {services.map((service) => (
             <motion.div 
               key={service.id} 
-              whileHover={{ y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.3)" }}
-              transition={{ type: "spring", stiffness: 300 }}
+              whileHover={{ y: -8, boxShadow: "0px 10px 30px rgba(0,0,0,0.2)" }}
+              transition={{ type: "tween", ease: "easeOut", duration: 0.3 }}
               className="bg-[#25352c] rounded-2xl p-8 border border-[#5B7A65] flex flex-col h-full"
             >
               <h3 className="font-serif text-2xl font-bold mb-2 text-[#C9A24B]">{service.title}</h3>
