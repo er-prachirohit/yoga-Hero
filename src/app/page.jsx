@@ -9,20 +9,21 @@ import BatchTimings from '@/components/home/BatchTimings';
 import Testimonials from '@/components/home/Testimonials';
 import FAQ from '@/components/home/FAQ';
 import ContactCTA from '@/components/home/ContactCTA';
+import AnimatedSection from '@/components/common/AnimatedSection';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F6F1E7]">
       <Navbar />
       <Hero />
-      <AboutTrainer />
-      <YogaPoses />
-      <Benefits />
-      <Services />
-      <BatchTimings />
-      <Testimonials />
-      <FAQ />
-      <ContactCTA />
+      <AnimatedSection><AboutTrainer /></AnimatedSection>
+      <AnimatedSection><YogaPoses /></AnimatedSection>
+      <AnimatedSection><Benefits /></AnimatedSection>
+      <AnimatedSection><Services /></AnimatedSection>
+      <AnimatedSection><BatchTimings /></AnimatedSection>
+      <AnimatedSection><Testimonials /></AnimatedSection>
+      <AnimatedSection><FAQ /></AnimatedSection>
+      <AnimatedSection><ContactCTA /></AnimatedSection>
       <Footer />
     </main>
   );
