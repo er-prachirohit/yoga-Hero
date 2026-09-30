@@ -1,5 +1,7 @@
+"use client";
 import React from 'react';
 import SectionTitle from '../common/SectionTitle';
+import { motion } from 'framer-motion';
 
 export default function Benefits() {
   const benefits = [
@@ -21,7 +23,12 @@ export default function Benefits() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
-            <div key={index} className="p-8 rounded-2xl bg-[#F6F1E7] border border-[#DDE5D3] hover:border-[#C9A24B] transition-colors">
+            <motion.div 
+              key={index} 
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 400 }}
+              className="p-8 rounded-2xl bg-[#F6F1E7] border border-[#DDE5D3] hover:border-[#C9A24B] transition-colors"
+            >
               <div className="w-12 h-12 bg-[#354A3E] text-[#F6F1E7] rounded-full flex items-center justify-center mb-6">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -29,7 +36,7 @@ export default function Benefits() {
               </div>
               <h3 className="font-serif text-xl font-bold text-[#354A3E] mb-3">{benefit.title}</h3>
               <p className="text-[#5B7A65]">{benefit.desc}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
