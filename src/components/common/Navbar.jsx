@@ -6,9 +6,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+      
       if (window.scrollY > lastScrollY && window.scrollY > 80) {
         setIsVisible(false); // Scrolling down
       } else {
@@ -22,7 +25,7 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   return (
-    <nav className={`fixed w-full z-50 bg-transparent transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'} ${isScrolled ? 'bg-[#F6F1E7]/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="w-full mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex justify-between items-center h-24">
           <div className="flex-shrink-0">
